@@ -1,0 +1,17 @@
+.profileContainer {
+    text-align: center;
+    margin: 10px 7px 0 7px;
+}
+
+.profile {
+    height: 66px;
+    width: 66px;
+    border-radius: 50%;
+    border: 2px solid #dd73ac;
+}
+
+.username {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 2px;
+}

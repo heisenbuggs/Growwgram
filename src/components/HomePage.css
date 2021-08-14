@@ -1,0 +1,31 @@
+.leftFeedPane {
+    margin: 15px 7px 0 0;
+}
+
+.rightDetailsPane {
+    margin: 15px 0 0 0;
+}
+
+.storyNav {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.storyNav::-webkit-scrollbar {
+    display: none;
+}
+
+.suggestions {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8e8e8e;
+}
+
+.seeAll {
+    font-size: 13px;
+    font-weight: 600;
+    color: #2e2e2e;
+}
