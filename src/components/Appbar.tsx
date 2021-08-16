@@ -8,13 +8,18 @@ import { Link } from "react-router-dom";
 const Appbar = () => {
   return (
     <nav className="appbar">
-      <h1 className="logo">Growwgram</h1>
+      <Link to="/" style={{textDecoration: 'none'}}>
+        <h1 className="logo">Growwgram</h1>
+      </Link>
       <div className="textInput">
         <span className="searchText">Search</span>
       </div>
       <div className="iconGroup">
         <Link to="/">
-          <Icon icon="cil:home" style={{ fontSize: 24, marginRight: 12, color: 'black' }} />
+          <Icon
+            icon="cil:home"
+            style={{ fontSize: 24, marginRight: 12, color: "black" }}
+          />
         </Link>
         <Icon
           icon="la:facebook-messenger"
@@ -31,7 +36,7 @@ const Appbar = () => {
         <Link to="/profile">
           <Icon
             icon="carbon:user-avatar"
-            style={{ fontSize: 26, marginRight: 12, color: 'black' }}
+            style={{ fontSize: 26, marginRight: 12, color: "black" }}
           />
         </Link>
       </div>

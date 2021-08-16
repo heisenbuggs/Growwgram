@@ -1,15 +1,12 @@
-import './HomePage.css';
+import "./HomePage.css";
 
-import React from 'react';
+import React from "react";
 
-import {
-  Col,
-  Container,
-  Row,
-} from 'reactstrap';
+import { Col, Container, Row } from "reactstrap";
 
-import FeedCard from './FeedCard';
-import StoryProfile from './StoryProfile';
+import FeedCard from "./FeedCard";
+import StoryProfile from "./StoryProfile";
+import Suggestion from "./Suggestion";
 
 const HomePage = () => {
   return (
@@ -32,15 +29,19 @@ const HomePage = () => {
             <StoryProfile />
           </Col>
           <Col md={12} className="">
-              <FeedCard />
+            <FeedCard />
           </Col>
         </Col>
         <Col md={3} className="rightDetailsPane">
-          <Row>
-            <Col xs={6} className="suggestions">Suggestions for You</Col>
-            <Col xs="auto"></Col>
-            <Col xs={4} className="seeAll">See all</Col>
-          </Row>
+          <div className="rowsuggest">
+            <h4 className="suggestions">Suggestions for You</h4>
+            <h4 className="seeAll">See All</h4>
+          </div>
+
+          <Suggestion />
+          <Suggestion />
+          <Suggestion />
+          <Suggestion />
         </Col>
         <Col md={1}></Col>
       </Row>

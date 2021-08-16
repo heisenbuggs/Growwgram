@@ -18,6 +18,11 @@
     display: none;
 }
 
+.rowsuggest {
+    display: flex;
+    justify-content: space-between;
+}
+
 .suggestions {
     font-size: 14px;
     font-weight: 600;
