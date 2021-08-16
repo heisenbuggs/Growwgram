@@ -1,0 +1,51 @@
+.mainClass {
+    margin-top: 25px;
+}
+
+.topCol {
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 20px;
+}
+
+.profileMainImage {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 1px solid #dbdbdb;
+}
+
+.profileNameRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profileNameMain {
+    font-size: 22px;
+}
+
+.detailsRow {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.number {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tag {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.bio {
+    font-size: 14px;
+    font-weight: 300;
+}

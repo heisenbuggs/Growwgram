@@ -1,6 +1,8 @@
-import React from "react";
-import profile from "../assets/profile.png";
-import "./StoryProfile.css";
+import './StoryProfile.css';
+
+import React from 'react';
+
+import profile from '../assets/profile.png';
 
 const StoryProfile = () => {
   return (

@@ -1,17 +1,29 @@
-import './App.css';
+import "./App.css";
 
-import React from 'react';
+import React from "react";
 
-import Appbar from './components/Appbar';
-import HomePage from './components/HomePage';
+import { Provider } from "react-redux";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import Appbar from "./components/Appbar";
+import HomePage from "./components/HomePage";
+import ProfilePage from "./components/ProfilePage";
+import store from "./redux/store";
 
 const App = () => {
   return (
-    <div className="App">
-      <Appbar />
-      <HomePage />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <BrowserRouter>
+          <Appbar />
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/profile" component={ProfilePage} />
+          </Switch>
+        </BrowserRouter>
+      </div>
+    </Provider>
   );
-}
+};
 
 export default App;

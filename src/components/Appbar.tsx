@@ -1,8 +1,9 @@
-import './Appbar.css';
+import "./Appbar.css";
 
-import React from 'react';
+import React from "react";
 
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 const Appbar = () => {
   return (
@@ -12,11 +13,27 @@ const Appbar = () => {
         <span className="searchText">Search</span>
       </div>
       <div className="iconGroup">
-        <Icon icon="cil:home" style={{ fontSize: 24, marginRight: 12 }} />
-        <Icon icon="la:facebook-messenger" style={{ fontSize: 28, marginRight: 12 }} />
-        <Icon icon="ant-design:compass-outlined" style={{ fontSize: 26, marginRight: 12 }} />
-        <Icon icon="ant-design:heart-outlined" style={{ fontSize: 26, marginRight: 12 }} />
-        <Icon icon="carbon:user-avatar" style={{ fontSize: 26, marginRight: 12 }} />
+        <Link to="/">
+          <Icon icon="cil:home" style={{ fontSize: 24, marginRight: 12, color: 'black' }} />
+        </Link>
+        <Icon
+          icon="la:facebook-messenger"
+          style={{ fontSize: 28, marginRight: 12 }}
+        />
+        <Icon
+          icon="ant-design:compass-outlined"
+          style={{ fontSize: 26, marginRight: 12 }}
+        />
+        <Icon
+          icon="ant-design:heart-outlined"
+          style={{ fontSize: 26, marginRight: 12 }}
+        />
+        <Link to="/profile">
+          <Icon
+            icon="carbon:user-avatar"
+            style={{ fontSize: 26, marginRight: 12, color: 'black' }}
+          />
+        </Link>
       </div>
     </nav>
   );

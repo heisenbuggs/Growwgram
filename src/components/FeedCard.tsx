@@ -1,9 +1,16 @@
-import { Icon } from "@iconify/react";
-import React from "react";
-import { Col, Container, Row } from "reactstrap";
-import profile from "../assets/profile.png";
-import post from "../assets/scene.jpeg";
-import "./FeedCard.css";
+import './FeedCard.css';
+
+import React from 'react';
+
+import {
+  Col,
+  Container,
+} from 'reactstrap';
+
+import { Icon } from '@iconify/react';
+
+import profile from '../assets/profile.png';
+import post from '../assets/scene.jpeg';
 
 const FeedCard = () => {
   return (

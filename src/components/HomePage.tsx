@@ -1,8 +1,15 @@
-import React from "react";
-import { Col, Container, Row } from "reactstrap";
-import StoryProfile from "./StoryProfile";
-import "./HomePage.css";
-import FeedCard from "./FeedCard";
+import './HomePage.css';
+
+import React from 'react';
+
+import {
+  Col,
+  Container,
+  Row,
+} from 'reactstrap';
+
+import FeedCard from './FeedCard';
+import StoryProfile from './StoryProfile';
 
 const HomePage = () => {
   return (
