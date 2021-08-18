@@ -33,7 +33,7 @@ const Appbar = () => {
           icon="ant-design:heart-outlined"
           style={{ fontSize: 26, marginRight: 12 }}
         />
-        <Link to="/spensersembrat">
+        <Link to="/alichoubin">
           <Icon
             icon="carbon:user-avatar"
             style={{ fontSize: 26, marginRight: 12, color: "black" }}

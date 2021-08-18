@@ -1,11 +1,7 @@
 import "./FeedCard.css";
-
 import React from "react";
-
 import { Col, Container } from "reactstrap";
-
 import { Icon } from "@iconify/react";
-
 import { post } from "../utils/FeedTypes";
 import { useHistory } from "react-router-dom";
 
@@ -24,14 +20,14 @@ const FeedCard = ({ post }: MyProps) => {
             className="profileImg"
             alt="img"
           />
-          <div className="infosec">
+          <div className="infose">
             <h4
               className="profileName"
               onClick={() => history.push("/"+post.user.username)}
             >
               {post.user.username}
             </h4>
-            <h4 className="location">{post.user.location}</h4>
+            <h4 className="location">{post.user.location ? post.user.location : post.user.first_name}</h4>
           </div>
         </div>
         <div>
