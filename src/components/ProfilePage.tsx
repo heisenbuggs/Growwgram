@@ -110,6 +110,7 @@ const ProfilePage = ({
   );
 };
 
+
 const mapStateToProps = (state: storeState) => {
   const { user, error, userPosts } = state;
   return { userPosts: userPosts, user: user, error: error };
