@@ -1,14 +1,19 @@
-import './StoryProfile.css';
+import "./StoryProfile.css";
 
-import React from 'react';
+import React from "react";
 
-import profile from '../assets/profile.png';
+import profile from "../assets/profile.png";
+import { post } from "../utils/FeedTypes";
 
-const StoryProfile = () => {
+type MyProps = {
+  post: post;
+};
+
+const StoryProfile = ({ post }: MyProps) => {
   return (
     <div className="profileContainer">
-      <img src={profile} className="profile" alt="profile" />
-      <h5 className="username">thereal_prasuk</h5>
+      <img src={post.user.profile_image.large} className="profile" alt="profile" />
+      <h5 className="username">{post.user.username}</h5>
     </div>
   );
 };

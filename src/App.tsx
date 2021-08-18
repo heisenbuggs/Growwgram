@@ -18,7 +18,7 @@ const App = () => {
           <Appbar />
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route exact path="/profile" component={ProfilePage} />
+            <Route exact path="/:username" component={ProfilePage} />
           </Switch>
         </BrowserRouter>
       </div>

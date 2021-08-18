@@ -1,26 +1,37 @@
-import './FeedCard.css';
+import "./FeedCard.css";
 
-import React from 'react';
+import React from "react";
 
-import {
-  Col,
-  Container,
-} from 'reactstrap';
+import { Col, Container } from "reactstrap";
 
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react";
 
-import profile from '../assets/profile.png';
-import post from '../assets/scene.jpeg';
+import { post } from "../utils/FeedTypes";
+import { useHistory } from "react-router-dom";
 
-const FeedCard = () => {
+type MyProps = {
+  post: post;
+};
+
+const FeedCard = ({ post }: MyProps) => {
+  let history = useHistory();
   return (
     <Container className="feedcardContainer">
       <Col xs={12} className="feedcardHeader">
         <div className="headerLeft">
-          <img src={profile} className="profileImg" alt="img" />
+          <img
+            src={post.user.profile_image.large}
+            className="profileImg"
+            alt="img"
+          />
           <div className="infosec">
-            <h4 className="profileName">thereal_prasuk</h4>
-            <h4 className="location">Bhopal, Madhya Pradesh</h4>
+            <h4
+              className="profileName"
+              onClick={() => history.push("/"+post.user.username)}
+            >
+              {post.user.username}
+            </h4>
+            <h4 className="location">{post.user.location}</h4>
           </div>
         </div>
         <div>
@@ -28,7 +39,7 @@ const FeedCard = () => {
         </div>
       </Col>
       <Col xs={12}>
-        <img src={post} alt="post" className="post" />
+        <img src={post.urls.full} alt="post" className="post" />
       </Col>
       <div className="posticonGroup">
         <div>
@@ -46,9 +57,12 @@ const FeedCard = () => {
           <Icon icon="bi:bookmark" style={{ fontSize: 25 }} />
         </div>
       </div>
-      <div className="likesCount">31,435 likes</div>
-      <div className="profileNameFeed">thereal_prasuk<span className="caption">Hello There!! This is my caption.</span></div>
-      <div className="viewComment">View all 531 Comments</div>
+      <div className="likesCount">{post.likes} likes</div>
+      <div className="profileNameFeed">
+        {post.user.username}
+        <span className="caption">{post.description}</span>
+      </div>
+      <div className="viewComment">View all {post.likes} Comments</div>
     </Container>
   );
 };
