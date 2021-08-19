@@ -9,7 +9,6 @@ import { connect } from "react-redux";
 import { post, storeState } from "../utils/FeedTypes";
 import { fetchPosts, clearPosts } from "../redux/actions";
 import { useEffect, useState } from "react";
-import Loader from "./Loader";
 
 import InfiniteScroll from "react-infinite-scroll-component";
 import LoaderAsset from "./Loader";
