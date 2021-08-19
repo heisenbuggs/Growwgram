@@ -1,8 +1,6 @@
 import "./StoryProfile.css";
 
 import React from "react";
-
-import profile from "../assets/profile.png";
 import { post } from "../utils/FeedTypes";
 
 type MyProps = {
