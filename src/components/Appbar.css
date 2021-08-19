@@ -1,29 +1,39 @@
 .appbar {
-    background-color: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    border-bottom: 1px solid #dbdbdb;
-    height: 54px;
-    justify-content: space-around;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid #dbdbdb;
+  height: 54px;
+  justify-content: space-around;
 }
 
 .logo {
-    font-family: 'Pacifico';
-    font-size: 29px;
-    color: black;
+  font-family: "Pacifico";
+  font-size: 29px;
+  color: black;
 }
 
 .textInput {
-    background-color: #fafafa;
-    border: 1px solid #dbdbdb;
-    border-radius: 4px;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
 }
 
 .searchText {
-    font-size: 14px;
-    color: #8e8e8e;
-    font-weight: 600;
-    padding: 1px 90px;
+  font-size: 14px;
+  color: #8e8e8e;
+  font-weight: 600;
+  padding: 1px 90px;
 }
 
+@media (max-width: 610px) {
+  .textInput {
+    display: none;
+  }
+}
+
+.loaderSpin {
+  display: flex;
+  justify-content: center;
+}

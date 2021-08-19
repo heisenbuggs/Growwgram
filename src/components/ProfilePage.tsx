@@ -58,15 +58,15 @@ const ProfilePage = ({
   return (
     <Container className="mainClass">
       <Row>
-        <Col md={2}></Col>
-        <Col xs={4} md={2} className="topCol">
+        <Col lg={1} xl={2}></Col>
+        <Col xs={5} md={4} lg={3} xl={2} className="topCol">
           <img
             src={user.profile_image.large}
             className="profileMainImage"
             alt="profile"
           />
         </Col>
-        <Col xs={6} md={4} className="topCol">
+        <Col xs={7} md={6} lg={5} xl={4} className="topCol">
           <div className="profileNameRow">
             <h3 className="profileNameMain">{user.username}</h3>
             <Icon
@@ -89,11 +89,11 @@ const ProfilePage = ({
           <h3 className="bio">{user.bio ? `${user.bio}` : ""}</h3>
           <h3 className="bio">{user.location ? `${user.location}` : ""}</h3>
         </Col>
-        <Col md={2} className="topCol" />
+        <Col xs={12} lg={1} xl={2} className="topCol smallSize" />
       </Row>
       <Row>
-        <Col xs={2}></Col>
-        <Col xs={8}>
+        <Col lg={1} xl={2}></Col>
+        <Col xs={12} md={10} lg={9} xl={8}>
           <div className="postsGrid">
             {userPosts.map((post) => (
               <img

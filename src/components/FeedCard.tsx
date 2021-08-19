@@ -4,10 +4,16 @@ import { Col, Container } from "reactstrap";
 import { Icon } from "@iconify/react";
 import { post } from "../utils/FeedTypes";
 import { useHistory } from "react-router-dom";
+import moment from "moment";
 
 type MyProps = {
   post: post;
 };
+
+const time = (str: string) => {
+  str = moment(str).startOf("minutes").fromNow();
+  return str;
+}
 
 const FeedCard = ({ post }: MyProps) => {
   let history = useHistory();
@@ -59,6 +65,7 @@ const FeedCard = ({ post }: MyProps) => {
         <span className="caption">{post.description}</span>
       </div>
       <div className="viewComment">View all {post.likes} Comments</div>
+      <div className="time">{time(post.created_at)}</div>
     </Container>
   );
 };

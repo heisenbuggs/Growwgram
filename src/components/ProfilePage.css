@@ -1,69 +1,75 @@
 .mainClass {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .topCol {
-    border-bottom: 2px solid #e8e8e8;
-    padding-bottom: 20px;
+  border-bottom: 2px solid #e8e8e8;
+  padding-bottom: 20px;
 }
 
 .profileMainImage {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    border: 1px solid #dbdbdb;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 1px solid #dbdbdb;
 }
 
 .profileNameRow {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .profileNameMain {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .detailsRow {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
 }
 
 .number {
-    font-size: 18px;
-    font-weight: 600;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .tag {
-    font-size: 18px;
-    font-weight: 400;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .name {
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 .bio {
-    font-size: 14px;
-    font-weight: 300;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .postsGrid {
-    display: grid;
-    grid-gap: 1em;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 20px;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
 }
 
 .imgGrid {
-    max-height: 30vh;
-    max-width: 100%;
-    width: 100%;
-    height: 200px;
+  max-height: 30vh;
+  max-width: 100%;
+  width: 100%;
+  height: 200px;
 }
 
 .imgGrid:hover {
-    transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+@media (max-width: 992px) {
+  .smallSize {
+    border-color: #fafafa;
+  }
 }
