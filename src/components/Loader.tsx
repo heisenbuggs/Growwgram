@@ -6,8 +6,8 @@ const LoaderAsset = () => {
   return (
     <div className="loaderSpin">
       <Loader
-        type="TailSpin"
-        color="#DBDBDB"
+        type="Oval"
+        color="#8e8e8e"
         height={50}
         width={50}
         timeout={3000}

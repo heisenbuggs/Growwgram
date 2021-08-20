@@ -1,5 +1,5 @@
 import "./ProfilePage.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "reactstrap";
 import { Icon } from "@iconify/react";
 import { post, storeState, user } from "../utils/FeedTypes";
@@ -11,6 +11,8 @@ import {
   fetchAUserPosts,
 } from "../redux/actions";
 import { useParams } from "react-router-dom";
+import InfiniteScroll from "react-infinite-scroll-component";
+import LoaderAsset from "./Loader";
 
 type paramTypes = {
   username: string;
@@ -39,6 +41,7 @@ const ProfilePage = ({
   error,
 }: propTypes) => {
   const { username } = useParams<paramTypes>();
+  const [page, setPage] = useState(0);
 
   useEffect(() => {
     fetchUser(username);
@@ -49,10 +52,13 @@ const ProfilePage = ({
     };
   }, [clearUserPosts, clearUser, fetchUser, username]);
 
+  const fetchMorePosts = () => {
+    fetchAUserPosts(username, page);
+    setPage(page + 1);
+  };
+
   const userIsEmpty =
     Object.keys(user).length === 0 && user.constructor === Object;
-
-  console.log(userPosts);
 
   if (userIsEmpty) return <div />;
   return (
@@ -94,22 +100,28 @@ const ProfilePage = ({
       <Row>
         <Col lg={1} xl={2}></Col>
         <Col xs={12} md={10} lg={9} xl={8}>
-          <div className="postsGrid">
-            {userPosts.map((post) => (
-              <img
-                key={post.id}
-                src={post.urls.regular}
-                alt="gridpost"
-                className="imgGrid"
-              />
-            ))}
-          </div>
+          <InfiniteScroll
+            dataLength={userPosts.length}
+            next={fetchMorePosts}
+            hasMore={true}
+            loader={<LoaderAsset />}
+          >
+            <div className="postsGrid">
+              {userPosts.map((post) => (
+                <img
+                  key={post.id}
+                  src={post.urls.regular}
+                  alt="gridpost"
+                  className="imgGrid"
+                />
+              ))}
+            </div>
+          </InfiniteScroll>
         </Col>
       </Row>
     </Container>
   );
 };
-
 
 const mapStateToProps = (state: storeState) => {
   const { user, error, userPosts } = state;
