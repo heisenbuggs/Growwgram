@@ -13,7 +13,7 @@ const Suggestion = ({post}: MyProps) => {
     <div className="suggestionsRow">
       <div>
         <img src={post.user.profile_image.large} alt="suggestProfile" className="suggestProfile" />
-        <h5 className="profileName" onClick={() => history.push("/"+post.user.username)}>{post.user.username}</h5>
+        <h5 className="profileNameSuggestion" onClick={() => history.push("/"+post.user.username)}>{post.user.username}</h5>
       </div>
       <h5 className="suggestionsFollow">Follow</h5>
     </div>

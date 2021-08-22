@@ -13,6 +13,8 @@ import {
 import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import LoaderAsset from "./Loader";
+import { setPriority } from "os";
+import FeedCard from "./FeedCard";
 
 type paramTypes = {
   username: string;
@@ -42,6 +44,7 @@ const ProfilePage = ({
 }: propTypes) => {
   const { username } = useParams<paramTypes>();
   const [page, setPage] = useState(0);
+  const [isGrid, setGrid] = useState(0);
 
   useEffect(() => {
     fetchUser(username);
@@ -100,22 +103,60 @@ const ProfilePage = ({
       <Row>
         <Col lg={1} xl={2}></Col>
         <Col xs={12} md={10} lg={9} xl={8}>
+          <Row className="RowMargin">
+            <Col xs={6} onClick={() => setGrid(1)}>
+              <div
+                className="profileNav"
+                style={{ color: isGrid ? "black" : "grey" }}
+              >
+                {" "}
+                <Icon
+                  icon="bx:bx-grid"
+                  style={{ fontSize: 24, color: isGrid ? "black" : "grey" }}
+                />{" "}
+                GRID
+              </div>
+            </Col>
+            <Col xs={6} onClick={() => setGrid(0)}>
+              <div
+                className="profileNav"
+                style={{ color: !isGrid ? "black" : "grey" }}
+              >
+                {" "}
+                <Icon
+                  icon="icon-park-outline:picture-one"
+                  style={{ fontSize: 22, color: !isGrid ? "black" : "grey" }}
+                />{" "}
+                POSTS
+              </div>
+            </Col>
+          </Row>
           <InfiniteScroll
             dataLength={userPosts.length}
             next={fetchMorePosts}
             hasMore={true}
             loader={<LoaderAsset />}
           >
-            <div className="postsGrid">
-              {userPosts.map((post) => (
-                <img
-                  key={post.id}
-                  src={post.urls.regular}
-                  alt="gridpost"
-                  className="imgGrid"
-                />
-              ))}
-            </div>
+            {isGrid ? (
+              <div className="postsGrid">
+                {userPosts.map((post) => (
+                  <div className="imgCont">
+                    <img
+                      key={post.id}
+                      src={post.urls.regular}
+                      alt="gridpost"
+                      className="imgGrid"
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div>
+                {userPosts.map((post) => (
+                  <FeedCard key={post.id} post={post} />
+                ))}
+              </div>
+            )}
           </InfiniteScroll>
         </Col>
       </Row>

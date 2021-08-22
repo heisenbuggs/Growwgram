@@ -1,25 +1,39 @@
 .suggestProfile {
-    width: 30px;
-    height: 30px;
-    float: left;
-    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  float: left;
+  border-radius: 50%;
 }
 
 .suggestionsRow {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .suggestionsFollow {
-    font-size: 13px;
-    color: #0095F6;
-    font-weight: 600;
-    margin-top: 4px;
+  font-size: 13px;
+  color: #0095f6;
+  font-weight: 600;
+  margin-top: 4px;
 }
 
 .viewFollowed {
-    color: #8e8e8e;
-    font-size: 10px;
-    font-weight: 600;
+  color: #8e8e8e;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.profileNameSuggestion {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 3px 0 0 7px;
+  cursor: pointer;
+  float: left;
+}
+
+.profileNav {
+  text-align: center;
+  color: #8e8e8e;
+  font-weight: 600;
 }

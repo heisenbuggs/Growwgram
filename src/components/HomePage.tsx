@@ -62,8 +62,7 @@ const HomePage = (props: MyProps) => {
             <h4 className="suggestions">Suggestions for You</h4>
             <h4 className="seeAll">See All</h4>
           </div>
-
-          {props.posts.map((post) => (
+          {props.posts.map((post, ind) => (
             <Suggestion key={post.id} post={post} />
           ))}
           <h4 className="suggestionsFooter marginFooter">

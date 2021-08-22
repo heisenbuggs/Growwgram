@@ -68,6 +68,10 @@
   transform: scale(1.04);
 }
 
+.RowMargin {
+  margin-top: 8px;
+}
+
 @media (max-width: 992px) {
   .smallSize {
     border-color: #fafafa;
