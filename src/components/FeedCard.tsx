@@ -40,8 +40,8 @@ const FeedCard = ({ post }: MyProps) => {
           <Icon icon="ph:dots-three" style={{ fontSize: 40 }} />
         </div>
       </Col>
-      <Col xs={12}>
-        <img src={post.urls.full} alt="post" className="post" />
+      <Col xs={12} className="postContainer">
+        <img src={post.urls.regular} alt="post" className="post" />
       </Col>
       <div className="posticonGroup">
         <div>

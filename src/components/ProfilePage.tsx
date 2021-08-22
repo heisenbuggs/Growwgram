@@ -44,7 +44,7 @@ const ProfilePage = ({
 }: propTypes) => {
   const { username } = useParams<paramTypes>();
   const [page, setPage] = useState(0);
-  const [isGrid, setGrid] = useState(0);
+  const [isGrid, setGrid] = useState(1);
 
   useEffect(() => {
     fetchUser(username);
@@ -147,6 +147,11 @@ const ProfilePage = ({
                       alt="gridpost"
                       className="imgGrid"
                     />
+                    <div className="imgOverlay">
+                      <div className="imgTitle">
+                        <Icon icon="topcoat:like" /> {post.likes}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>

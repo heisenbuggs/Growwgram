@@ -1,87 +1,97 @@
 .feedcardContainer {
-    background-color: #fff;
-    border: 1px solid #dbdbdb;
-    margin-top: 24px;
-    border-radius: 4px;
-    padding-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  margin-top: 24px;
+  border-radius: 4px;
+  padding-bottom: 10px;
 }
 
 .feedcardHeader {
-    display: flex;
-    margin-top: 8px;
-    justify-content: space-between;
+  display: flex;
+  margin-top: 8px;
+  justify-content: space-between;
 }
 
 .profileImg {
-    height: 40px;
-    width: 40px;
-    float: left;
-    border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  float: left;
+  border-radius: 50%;
 }
 
 .headerleft {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .infose {
-    float: left;
+  float: left;
 }
 
 .profileName {
-    font-size: 14px;
-    font-weight: 600;
-    margin: 3px 0 0 7px;
-    cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 3px 0 0 7px;
+  cursor: pointer;
 }
 
 .location {
-    font-size: 12px;
-    font-weight: 400;
-    margin-left: 7px;
-    margin-top: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 7px;
+  margin-top: 2px;
+}
+
+.postContainer {
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
 }
 
 .post {
-    width: 100%;
-    height: 400px;
-    margin-top: 10px;
+  width: 80%;
+  height: 400px;
+  margin-top: 10px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 10%;
 }
 
 .posticonGroup {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .likesCount {
-    font-weight: 600;
-    font-size: 14px;
-    margin: 1px;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 1px;
 }
 
 .profileNameFeed {
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 2px;
 }
 
 .caption {
-    font-size: 14px;
-    font-weight: 400;
-    margin-left: 7px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 7px;
 }
 
 .viewComment {
-    color: #8e8e8e;
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 1px;
+  color: #8e8e8e;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 1px;
 }
 
 .time {
-    color: #8e8e8e;
-    font-size: 11px;
-    margin-left: 1px;
-    text-transform: capitalize;
+  color: #8e8e8e;
+  font-size: 11px;
+  margin-left: 1px;
+  text-transform: capitalize;
 }
