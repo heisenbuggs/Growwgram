@@ -1,14 +1,16 @@
-import "./App.css";
+import './App.css';
 
-import React from "react";
+import { Provider } from 'react-redux';
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+} from 'react-router-dom';
 
-import { Provider } from "react-redux";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-
-import Appbar from "./components/Appbar";
-import HomePage from "./components/HomePage";
-import ProfilePage from "./components/ProfilePage";
-import store from "./redux/store";
+import Appbar from './components/Appbar';
+import HomePage from './components/HomePage';
+import ProfilePage from './components/ProfilePage';
+import store from './redux/store';
 
 const App = () => {
   return (

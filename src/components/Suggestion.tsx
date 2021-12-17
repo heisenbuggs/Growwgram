@@ -1,7 +1,8 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
-import { post } from "../utils/FeedTypes";
-import "./Suggestion.css";
+import './Suggestion.css';
+
+import { useHistory } from 'react-router-dom';
+
+import { post } from '../utils/FeedTypes';
 
 type MyProps = {
   post: post;

@@ -1,20 +1,34 @@
-import "./ProfilePage.css";
-import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "reactstrap";
-import { Icon } from "@iconify/react";
-import { post, storeState, user } from "../utils/FeedTypes";
-import { connect } from "react-redux";
+import './ProfilePage.css';
+
+import React, {
+  useEffect,
+  useState,
+} from 'react';
+
+import InfiniteScroll from 'react-infinite-scroll-component';
+import { connect } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import {
+  Col,
+  Container,
+  Row,
+} from 'reactstrap';
+
+import { Icon } from '@iconify/react';
+
 import {
   clearUser,
-  fetchUser,
   clearUserPosts,
   fetchAUserPosts,
-} from "../redux/actions";
-import { useParams } from "react-router-dom";
-import InfiniteScroll from "react-infinite-scroll-component";
-import LoaderAsset from "./Loader";
-import { setPriority } from "os";
-import FeedCard from "./FeedCard";
+  fetchUser,
+} from '../redux/actions';
+import {
+  post,
+  storeState,
+  user,
+} from '../utils/FeedTypes';
+import FeedCard from './FeedCard';
+import LoaderAsset from './Loader';
 
 type paramTypes = {
   username: string;
